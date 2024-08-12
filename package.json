@@ -1,0 +1,27 @@
+{
+  "name": "job-portal",
+  "version": "1.0.0",
+  "description": "job portal project",
+  "main": "main.js",
+  "type": "module",
+  "scripts": {
+    "start": "node main.js",
+    "main": "nodemon main.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "type":"module",
+    "chalk": "^5.3.0",
+    "color": "^4.2.3",
+    "colors": "^1.4.0",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2",
+    "mongodb": "^6.8.0",
+    "mongoose": "^8.5.2",
+    "morgan": "^1.10.0",
+    "nodemon": "^3.1.4",
+    "validator": "^13.12.0"
+  }
+}

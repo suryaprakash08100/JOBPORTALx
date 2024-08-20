@@ -7,12 +7,15 @@ import morgan from "morgan";
 import connectDB from "./config/db.js";
 import testRoutes from "./routes/testRoutes.js"
 import authRoutes from "./routes/authRoutes.js"
+import errorMiddleware from "./middlewares/errorMiddleware.js";
+
+
 const app = express()
 dotenv.config()
 app.use(express.json());
-app.use('/api/v1/test/', testRoutes)
+app.use('/api/v1/test', testRoutes)
 app.use('/api/v1/auth', authRoutes)
-
+app.use(errorMiddleware)
 app.use(cors())
 app.use(morgan("dev"))
 
@@ -27,5 +30,5 @@ const PORT = process.env.PORT || 4000
 
 
 app.listen(PORT, () => {
-    console.log(chalk.bgCyan.white('Server Running ' + PORT))
+    console.log(chalk.bgWhite.red('Server Running ' + PORT))
 })
